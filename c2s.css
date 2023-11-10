@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+
+.containers {
+  width: 250px;
+  height: 65px;
+  background: white;
+  padding: 10px 18px;
+  display: flex;
+  margin: 200px auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 25px rgba(58, 55, 55, 0.2);
+}
+p {
+  margin-left: 18px;
+}
+.rotate {
+  overflow: hidden;
+}
+
+span {
+  display: block;
+  height: 100%;
+  padding-left: 10px;
+  color: #ae00ff;
+  animation: rotate_words 6s infinite;
+}
+
+@keyframes rotate_words {
+  10% {
+    transform: translateY(-75%);
+  }
+  25% {
+    transform: translateY(-79%);
+  }
+  35% {
+    transform: translateY(-176%);
+  }
+  50% {
+    transform: translateY(-180%);
+  }
+  60% {
+    transform: translateY(-275%);
+  }
+  75% {
+    transform: translateY(-280%);
+  }
+  85% {
+    transform: translateY(-373%);
+  }
+  100% {
+    transform: translateY(-380%);
+  }
+}

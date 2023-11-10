@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto text-center mt-8">
+        <h1 class="text-4xl font-bold mb-4">Shopping Cart</h1>
+        <div class="flex justify-center mb-8">
+            <a href="#" class="mr-2">Home</a> /
+            <a href="#" class="mx-2">Clothing Categories</a> /
+            <a href="#" class="ml-2">My Shopping Cart</a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-8">
+            <div class="col-span-1 bg-white rounded-lg p-6 shadow">
+                <h3 class="text-4xl font-bold mb-2">a</h3>
+                <h4 class="text-xl font-bold mb-2">LOGIN<span class="text-green-500">&#x2713;</span></h4>
+                <p class="text-gray-500"></p>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded mt-4">CHANGE</button>
+            </div>
+
+            <div class="col-span-1 bg-white rounded-lg p-6 shadow">
+                <h3 class="text-4xl font-bold mb-2">b</h3>
+                <h4 class="text-xl font-bold mb-2">SHIPPING ADDRESS<span class="text-green-500">&#x2713;</span></h4>
+                <p class="text-gray-500"></p>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded mt-4">CHANGE</button>
+            </div>
+
+            <div class="col-span-1 bg-white rounded-lg p-6 shadow">
+                <h3 class="text-4xl font-bold mb-2">b</h3>
+                <p>PAYMENT METHOD</p>
+                <div class="flex items-center mt-4">
+                    <img src="circle.png" class="w-10 h-10 mr-4">
+                    <img src="card.png" class="w-12 h-12 mr-2">
+                    <p class="text-gray-500">Debit / Credit Card</p>
+                </div>
+                <div class="mt-4">
+                    <label for="card_no" class="block text-sm font-semibold">Enter Card Number *</label>
+                    <input type="text" class="border border-gray-300 p-2 w-full rounded mt-2">
+
+                    <div class="flex mt-4">
+                        <div class="w-1/2 mr-2">
+                            <label for="valid" class="text-sm font-semibold block">Valid Date</label>
+                            <input type="month" id="valid" class="border border-gray-300 p-2 w-full rounded mt-2">
+                        </div>
+                        <div class="w-1/2 ml-2">
+                            <label for="cvv" class="text-sm font-semibold block">CVV *</label>
+                            <input type="number" id="cvv" maxlength="3" class="border border-gray-300 p-2 w-full rounded mt-2">
+                        </div>
+                    </div>
+
+                    <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Pay $117.00</button>
+                </div>
+
+                <div class="mt-4">
+                    <input type="radio" id="radio" class="mr-2">
+                    <img src="globe.png" class="w-10 h-10 mr-2">
+                    <label for="net" class="text-gray-500">Net Banking</label>
+                </div>
+
+                <div class="mt-2">
+                    <input type="radio" id="radio" class="mr-2">
+                    <img src="wallet.jpg" class="w-10 h-10 mr-2">
+                    <label for="net" class="text-gray-500">Google / Apple Wallet</label>
+                </div>
+            </div>
+        </div>
+
+        <a href="bill.html" class="block text-center bg-black text-white py-4 mt-8 font-semibold rounded-lg hover:bg-gray-800">
+            Confirm Payment
+        </a>
+    </div>
+</body>
+
+</html>

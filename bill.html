@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <div id="listPage" class="container mx-auto p-8 bg-white shadow-lg rounded-lg mt-16">
+        <h1 class="text-3xl font-bold mb-4">The Critics Billing</h1>
+        <hr class="my-4">
+        <div class="flex items-center">
+            <img src="download.png" class="w-12 h-12 rounded-full mr-4">
+            <h4 class="text-xl font-semibold">USER ONE CUSTOMER</h4>
+        </div>
+        <hr class="my-4">
+        <div class="mb-4">
+            <p class="mb-2"><strong>NAME:</strong> USER ONE</p>
+            <p class="mb-2"><strong>BILL NO:</strong> TC001</p>
+            <p><strong>SHIPPING ADDRESS:</strong> RAJA STRRET, NEAR BUSSTAND, ERODE-637112</p>
+        </div>
+        <hr class="my-4">
+        <div id="formArea" class="mb-4">
+            <label class="block mb-2">
+                <input type="text" id="iWant" value="RED MAXI DRESS amt:$100;<br>2.BLAZERS amt:$150;<br>TOTAL:250"
+                    class="border border-gray-400 p-2 w-full rounded">
+            </label>
+            <label class="block mb-2">
+                <input type="text" id="iWant" value="BLAZERS amt:$150" class="border border-gray-400 p-2 w-full rounded">
+            </label>
+            <label class="block mb-2">
+                <input type="text" id="iWant" value="TOTAL:250" class="border border-gray-400 p-2 w-full rounded">
+            </label>
+            <button type="button" id="addIt"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Confirm!</button>
+            <div class="mt-4">
+                <button type="button" id="printable"
+                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Print My
+                    Bill</button>
+            </div>
+        </div>
+        <ol id="wishList" class="list-decimal pl-4"></ol>
+    </div>
+    <script src="bill.js"></script>
+</body>
+
+</html>

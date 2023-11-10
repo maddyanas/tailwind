@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Create Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="bg-fixed bg-cover" style="background-image: url('bdt.jpg');">
+    <div class="flex justify-center items-center h-screen">
+        <div class="form-container bg-white border border-gray-300 p-8 rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold mb-8 text-center">Create Account</h1>
+            <form name="myForm" method="post" action="mainpro.html" onsubmit="return validation()">
+                <div class="mb-4">
+                    <input class="w-full py-2 px-4 border rounded bg-gray-100 focus:outline-none focus:border-blue-500"
+                        type="text" name="name" id="name" autofocus placeholder="Name">
+                </div>
+                <div class="mb-4">
+                    <input class="w-full py-2 px-4 border rounded bg-gray-100 focus:outline-none focus:border-blue-500"
+                        type="text" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="mb-4">
+                    <input class="w-full py-2 px-4 border rounded bg-gray-100 focus:outline-none focus:border-blue-500"
+                        type="password" name="password" placeholder="Password">
+                </div>
+                <div class="mb-4">
+                    <input class="w-full py-2 px-4 border rounded bg-gray-100 focus:outline-none focus:border-blue-500"
+                        type="password" name="confirmpassword" placeholder="Confirm Password">
+                </div>
+                <button type="submit"
+                    class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Continue
+                </button>
+            </form>
+            <p class="mt-4 text-center">Already have an account? <a href="index.html"
+                    class="text-blue-500">Sign in</a></p>
+        </div>
+    </div>
+
+    <script>
+        function validation() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            if (name == "" || !name.match(/^[a-zA-Z]+$/)) {
+                alert("Name should be filled out with alphabets only");
+                return false;
+            }
+            if (document.forms["myForm"]["password"].value.length < 8) {
+                alert("Password should contain at least 8 characters");
+                return false;
+            }
+            if (document.forms["myForm"]["password"].value == document.forms["myForm"]["name"].value) {
+                alert("Password should not be the same as name");
+                return false;
+            }
+            if (document.forms["myForm"]["password"].value != document.forms["myForm"]["confirmpassword"].value) {
+                alert("Password and Confirm Password should be the same");
+                return false;
+            }
+            if (name.length < 5) {
+                alert("Name must be more than 5 characters");
+                return false;
+            }
+            if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+            if (document.forms["myForm"]["password"].value.length < 8) {
+                alert("Password should contain at least 8 characters");
+                return false;
+            }
+            if (document.forms["myForm"]["password"].value == document.forms["myForm"]["name"].value) {
+                alert("Password should not be the same as name");
+                return false;
+            }
+            if (document.forms["myForm"]["password"].value != document.forms["myForm"]["confirmpassword"].value) {
+                alert("Password and Confirm Password should be the same");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

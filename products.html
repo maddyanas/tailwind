@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NU_312</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-fixed" style="background-image: url('bdt.jpg'); background-size: cover;">
+    <div class="flex justify-center items-center h-screen">
+        <div class="border-10 border-beige rounded-lg p-0 bg-beige w-2/3">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="p-8 flex flex-col justify-center items-center">
+                    <img src="ds1.png" width="70%" id="ProductImg" class="mb-4 object-cover">
+                    <div class="flex space-x-2">
+                        <div class="w-1/4">
+                            <img src="ds2.jpeg" width="100%" class="small-img cursor-pointer" onclick="myFunction(this)">
+                        </div>
+                        <div class="w-1/4">
+                            <img src="ds3.jpeg" width="100%" class="small-img cursor-pointer" onclick="myFunction(this)">
+                        </div>
+                        <div class="w-1/4">
+                            <img src="ds4.png" width="100%" class="small-img cursor-pointer" onclick="myFunction(this)">
+                        </div>
+                        <div class="w-1/4">
+                            <img src="ds1.png" width="100%" class="small-img cursor-pointer" onclick="myFunction(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 flex flex-col justify-center items-center">
+                    <h1 class="text-3xl font-bold mb-4">FIND YOUR STYLE AT OUR BOUTIQUE!</h1>
+                    <h4 class="text-xl mb-4">$199.99</h4>
+                    <select class="mb-4 p-2 border border-gray-300 rounded">
+                        <option>Select color</option>
+                        <option>white</option>
+                        <option>pink</option>
+                        <option>aquamarine/blue</option>
+                        <option>black</option>
+                        <option>red</option>
+                    </select>
+                    <select class="mb-4 p-2 border border-gray-300 rounded">
+                        <option>Select size</option>
+                        <option>S</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <input type="number" value="1" class="mb-4 p-2 border border-gray-300 rounded w-16 text-center">
+                    <a href="cart3.html"
+                        class="btn bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded-full">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction(smallImg) {
+            var fullImg = document.getElementById("ProductImg");
+            fullImg.src = smallImg.src;
+        }
+    </script>
+</body>
+
+</html>
